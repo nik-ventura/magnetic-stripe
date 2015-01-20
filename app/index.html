@@ -2,16 +2,18 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>magnetic stripe</title>
-    <meta name="description" content="">
+    <title>Magnetic stripe</title>
+    <meta name="description" content="Magnetic stripe hair pins organizer. Hairstyle accessory. Keep your hair pins organized and always in place with this beautiful, handmade magnetic stripe.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/lightslider/lightslider/css/lightSlider.css" />
     <!-- endbower -->
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700' rel='stylesheet' type='text/css'>
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -20,17 +22,35 @@
     <!-- endbuild -->
 
   </head>
-  <body ng-app='magneticStripe'>
+  <body ng-app='magnetic-stripe'  ng-strict-di>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div id="outer-wrap">
+      <div id="inner-wrap">
+        
+        <header id="top" role="banner">
+          <div class="block align-center animated bounceInUp">
+            <a class="nav-btn" id="nav-open-btn">Book Navigation</a>
+            <a href="/#/home"><img src="images/magnetic-stripe-logo.png" alt=""/></a>
+          </div>
+        </header>
+        <nav id="nav" role="navigation" class="animated bounceInDown">
+          <div class="block container">
+            <ul class="" data-ng-controller="MenuCtrl">
+              <li><a href="#/about" ng-class="getClass('/home')" ng-model="home" class="fx fx-1">About</a></li>
+              <li><a href="#/designs" ng-class="getClass('/designs')" ng-model="designs" class="fx fx-1">Available designs</a></li>
+              <li><a href="#/buy" ng-class="getClass('/buy')" ng-model="buy" class="fx fx-1 btn-important">Where to buy <i class="icon-heart"></i> </a></li>
+              <li><a href="#/contact" ng-class="getClass('/contact')" ng-model="contact" class="fx fx-1">Contact</a></li>
+            </ul>
+            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+          </div>
+        </nav>
 
-
-    <div class="container">
-      <ui-view></ui-view>
-
+        <div class="container" ui-view>
+        </div>
+      </div>
     </div>
-
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -52,21 +72,27 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/lightslider/lightslider/js/jquery.lightSlider.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58711000-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers.js"></script>
+        <script src="scripts/services.js"></script>
+        <script src="scripts/vendor/offcanvas-menu.js"></script>
         <!-- endbuild -->
 </body>
 </html>
