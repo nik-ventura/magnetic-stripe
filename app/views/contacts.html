@@ -5,14 +5,33 @@
       </h1>
       <hr>
     </section>
-    <section class="body">
-       <div class="col-md-4">
-         <span class="contact-link fx fx-1 fx-2"><a href="mailto:faria.grupp@gmail.com"><i class="icon-mail"></i> <b>Email</b> faria.grupp@gmail.com</a> </span>
-       </div>
-       <div class="col-md-4">
-         <span class="contact-link fx fx-1 fx-2"><a href="skype:nikzz"><i class="icon-skype"></i> <b>Skype</b> nikzz</a></span>
-       </div>
-    </section>
-    <hr>
   </div>
+  <div class="col-md-4">
+    <p class="contact-link fx fx-1 fx-2"><a href="mailto:faria.grupp@gmail.com"><i class="icon-mail"></i> <b>Email</b> faria.grupp@gmail.com</a> </p><br>
+    <p class="contact-link fx fx-1 fx-2"><a href="skype:nikzz"><i class="icon-skype"></i> <b>Skype</b> nikzz</a></p>
+  </div>
+  <div class="col-md-4">
+    <form name="emailForm" data-ng-submit="submitForm()" novalidate class="animated fadeInDown">
+      <div id="formStatus" class="alert alert-success" data-ng-show="statusMessage" data-ng-bind="statusMessage"></div>
+      <div class="form-group form-group-icons" data-ng-model-options="{updateOn: 'blur'}" data-ng-class="{'has-error' : emailForm.name.$error.required && emailForm.name.$dirty && emailForm.name.$focused}">
+        <input class="form-control" type="text" name="name" placeholder="Your name" data-ng-model="formData.name" ng-minlength="3" required ng-focus/>
+        <i class="icon-insert-emoticon"></i>
+        <p class="help-block animated fadeInUp" data-ng-show="emailForm.name.$error.required && emailForm.name.$dirty && !emailForm.name.$focused">Please enter your name</p>
+        <p class="help-block animated fadeInUp" data-ng-show="emailForm.name.$error.minlength && emailForm.name.$dirty && !emailForm.name.$focused">Name must be at least 3 chars</p>
+      </div>
+      <div class="form-group form-group-icons"  data-ng-model-options="{updateOn: 'blur'}" data-ng-class="{'has-error' : emailForm.email.$invalid && !emailForm.email.$pristine && !emailForm.email.$focused}">
+        <input class="form-control" type="email" name="email" placeholder="Your contact email" data-ng-model="formData.email" required ng-focus/>
+        <i class="icon-mail"></i>
+        <p class="help-block animated fadeInUp" data-ng-show="emailForm.$error.email && !emailForm.email.$pristine && !emailForm.email.$focused">Please check your email</p>
+        <p class="help-block animated fadeInUp" data-ng-show="emailForm.email.$error.required && !emailForm.email.$pristine && !emailForm.email.$focused">Please enter your email</p>
+      </div>
+      <div class="form-group form-group-icons" data-ng-model-options="{updateOn: 'blur'}" data-ng-class="{'has-error': emailForm.body.$error.required && !emailForm.body.$pristine}">
+        <textarea class="form-control" name='body' placeholder="Write your message to us" data-ng-model="formData.body" required></textarea>
+        <i class="icon-chat"></i>
+        <p class="help-block animated fadeInUp" data-ng-show="emailForm.body.$error.required && !emailForm.body.$pristine">Please enter your message</p>
+      </div>
+      <button class="btn" type="submit" data-ng-disabled="emailForm.$invalid">Send <i class="icon-mail"></i></button>
+    </form>
+  </div>
+
 </div>

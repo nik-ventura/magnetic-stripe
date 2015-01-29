@@ -1,0 +1,38 @@
+
+// Button styles
+.btn {
+  position: relative;
+  border-radius: 0;
+  background: $brand-red;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  transition:all 0.2s ease-in-out;
+  outline:none;
+  width: 100%;
+  &:active {
+    top:1px;
+    outline:none;
+  }
+  &:hover {
+    background: $brand-red;
+    color: #fff;
+    padding: 1em 1.5em;
+  }
+  &:focus {
+    outline: none;
+    color: #fff;
+  }
+  i {
+    margin: 0 0 0 10px;
+  }
+}
+
+// Social buttons
+.fb-like {
+  line-height: 16px;
+}
+a[data-pin-log] {
+  display: inline-block;
+  margin: 0 5px -4px 0;
+  border-radius: 2px;
+}

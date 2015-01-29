@@ -5,6 +5,9 @@
     <title>Magnetic stripe</title>
     <meta name="description" content="Magnetic stripe hair pins organizer. Hairstyle accessory. Keep your hair pins organized and always in place with this beautiful, handmade magnetic stripe.">
     <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Original Hair Pins organizer" />
+    <meta property="og:description" content="Magnetic stripe hair pins organizer. Hairstyle accessory. Keep your hair pins organized and always in place with this beautiful, handmade magnetic stripe." />
+    <meta property="og:image" content="http://fariagrupp.com/magnetic-stripe/images/4038affe.image_2.jpg" />
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -42,6 +45,10 @@
               <li><a href="#/designs" ng-class="getClass('/designs')" ng-model="designs" class="fx fx-1">Available designs</a></li>
               <li><a href="#/buy" ng-class="getClass('/buy')" ng-model="buy" class="fx fx-1 btn-important">Where to buy <i class="icon-heart"></i> </a></li>
               <li><a href="#/contact" ng-class="getClass('/contact')" ng-model="contact" class="fx fx-1">Contact</a></li>
+              <li>
+                <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red" class="pin-btn"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+                <!--<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div> -->
+              </li>
             </ul>
             <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
           </div>
@@ -83,16 +90,27 @@
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-58711000-1', 'auto');
+      ga('create', 'UA-59109539-1', 'auto');
       ga('send', 'pageview');
 
     </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers.js"></script>
+        <script src="scripts/directives.js"></script>
         <script src="scripts/services.js"></script>
+
+        <script src="scripts/controllers.js"></script>
         <script src="scripts/vendor/offcanvas-menu.js"></script>
         <!-- endbuild -->
+    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+    <!--<div id="fb-root"></div>-->
+    <!--<script>(function(d, s, id) {-->
+      <!--var js, fjs = d.getElementsByTagName(s)[0];-->
+      <!--if (d.getElementById(id)) return;-->
+      <!--js = d.createElement(s); js.id = id;-->
+      <!--js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1588380664715444&version=v2.0";-->
+      <!--fjs.parentNode.insertBefore(js, fjs);-->
+    <!--}(document, 'script', 'facebook-jssdk'));</script>-->
 </body>
 </html>

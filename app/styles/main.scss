@@ -6,7 +6,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "_variables";
 @import "_typography";
 @import "_icons";
+@import "_buttons";
 @import "_menu";
+@import "_forms";
 
 html, body {
   height: 100% ;
@@ -45,6 +47,7 @@ section {
 }
 .features-list {
   -webkit-padding-start:0;
+  -moz-padding-start:0;
   margin: 0 0 40px 0;
   li {
     transition: all 0.2s ease-in-out;
@@ -73,7 +76,7 @@ section {
 #imageSlider {
   margin-top: 20px;
   li {
-    padding: 20px;
+    padding: 0;
     text-align: center;
   }
 }
@@ -84,8 +87,10 @@ iframe {
   font-size: 1.5em;
   list-style: none;
   -webkit-padding-start:0;
+  -moz-padding-start:0;
   li {
   -webkit-padding-start:0;
+  -moz-padding-start:0;
   a {
       color: #666;
       padding: 20px;
@@ -103,6 +108,8 @@ iframe {
   padding: 10px;
   margin-right:40px;
   position: relative;
+  display: inline-block;
+  border-bottom: 2px dotted #ccc;
   a, a:hover {
     color: #333;
     text-decoration: none;
@@ -126,85 +133,4 @@ ul {
       display: inline-block;
     }
   }
-}
-
-// Animations
-.repeat-animation.ng-enter-stagger,
-.repeat-animation.ng-leave-stagger,
-.repeat-animation.ng-move-stagger {
-  /* 400ms will be applied between each sucessive enter operation */
-  -webkit-transition-delay:0.4s;
-  transition-delay:0.4s;
-}
-
-.repeat-animation.ng-enter,
-.repeat-animation.ng-leave,
-.repeat-animation.ng-move {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
-
-}
-
-.repeat-animation.ng-leave.ng-leave-active,
-.repeat-animation.ng-enter,
-.repeat-animation.ng-move {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
-  opacity:0;
-  transform: translate3d(0px, 50px, 0px) ;
-}
-
-.repeat-animation.ng-leave,
-.repeat-animation.ng-move.ng-move-active,
-.repeat-animation.ng-enter.ng-enter-active {
-  opacity:1;
-  transform: translate3d(0px, 0px, 0px) ;
-}
-
-/* Have to set height explicity on ui-view
-to prevent collapsing during animation*/
-.container[ui-view]{
-  height: 100%;
-}
-
-.ui-view-container {
-  position: relative;
-}
-
-[ui-view].ng-enter, [ui-view].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-transition:all .5s ease-in-out;
-  -moz-transition:all .5s ease-in-out;
-  -o-transition:all .5s ease-in-out;
-  transition:all .5s ease-in-out;
-}
-
-[ui-view].ng-enter {
-  opacity: 0;
-  -webkit-transform:scale3d(0.5, 0.5, 0.5);
-  -moz-transform:scale3d(0.5, 0.5, 0.5);
-  transform:scale3d(0.5, 0.5, 0.5);
-}
-
-[ui-view].ng-enter-active {
-  opacity: 1;
-  -webkit-transform:scale3d(1, 1, 1);
-  -moz-transform:scale3d(1, 1, 1);
-  transform:scale3d(1, 1, 1);
-}
-
-[ui-view].ng-leave {
-  opacity: 1;
-  -webkit-transform:translate3d(0, 0, 0);
-  -moz-transform:translate3d(0, 0, 0);
-  transform:translate3d(0, 0, 0);
-}
-
-[ui-view].ng-leave-active {
-  opacity: 0;
-  -webkit-transform:translate3d(100px, 0, 0);
-  -moz-transform:translate3d(100px, 0, 0);
-  transform:translate3d(100px, 0, 0);
 }

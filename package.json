@@ -1,6 +1,8 @@
 {
   "name": "magnetic-stripe",
   "devDependencies": {
+    "nodemailer": "~0.7.1",
+    "express": "~4.5.1",
     "apache-server-configs": "^2.7.1",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.0",
