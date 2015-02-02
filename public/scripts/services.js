@@ -14,15 +14,18 @@ app.factory('FeaturesList', function(){
     return Features;
 });
 
-// Service for processing contact form
-app.service('ProcessForm', ['$http', function( $http) {
+
+// Service for sending email
+app.service('sendEmail', ['$http', function($http) {
     return {
-        processForm : function(formData, cb){
-           $http.post('/sendEmail', formData)
-               .success(cb)
-               .error(function(){
-                   console.log('Sending email failed')
-               })
+        sendingEmail : function(data) {
+            console.log('dist reached');
+            if (data.$valid) {
+                console.log(data);
+                $http.post('/sendEmail', data)
+            } else {
+                data.submitted = true;
+            }
         }
     }
-}]);
+}])

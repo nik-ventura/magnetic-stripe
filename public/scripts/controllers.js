@@ -17,15 +17,22 @@ app.controller('FeaturesCtrl', ['$scope', 'FeaturesList', function($scope, Featu
 }]);
 
 // Controller for contact form
-app.controller('ContactCtrl',  ['$scope', '$http', function($scope, $http){
+//app.controller('ContactCtrl',  ['$scope', '$http', function($scope, $http){
+//    $scope.formData = {};
+//    $scope.submitted = false;
+//    $scope.submitForm = function() {
+//        if ($scope.emailForm.$valid) {
+//            console.log($scope.formData);
+//            $http.post('/sendEmail', $scope.formData)
+//        } else {
+//            $scope.emailForm.submitted = true;
+//        }
+//    };
+//}]);
+
+app.controller('ContactCtrl',  ['$scope', 'sendEmail', function($scope, sendEmail){
     $scope.formData = {};
     $scope.submitted = false;
-    $scope.submitForm = function() {
-        if ($scope.emailForm.$valid) {
-            console.log($scope.formData);
-            $http.post('/sendEmail', $scope.formData)
-        } else {
-            $scope.emailForm.submitted = true;
-        }
-    };
+//    $scope.submitForm = sendEmail.sendingEmail($scope.formData)
 }]);
+

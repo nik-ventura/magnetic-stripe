@@ -1,9 +1,17 @@
 {
   "name": "magnetic-stripe",
-  "devDependencies": {
-    "nodemailer": "~0.7.1",
-    "express": "~4.5.1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
     "apache-server-configs": "^2.7.1",
+    "body-parser": "~1.10.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.1.1",
+    "ejs": "~1.0.0",
+    "express": "~4.10.6",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.0",
     "grunt-concurrent": "^0.5.0",
@@ -27,9 +35,10 @@
     "grunt-wiredep": "^1.7.0",
     "jshint-stylish": "^0.4.0",
     "load-grunt-tasks": "^0.4.0",
+    "mongoose": "^3.8.21",
+    "morgan": "~1.5.1",
+    "nodemailer": "^1.3.0",
+    "serve-favicon": "~2.2.0",
     "time-grunt": "^0.4.0"
-  },
-  "engines": {
-    "node": ">=0.10.0"
   }
 }
