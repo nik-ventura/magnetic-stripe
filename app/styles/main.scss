@@ -1,0 +1,95 @@
+
+
+@import "_animations";
+@import "_variables";
+@import "_typography";
+@import "_icons";
+@import "_forms";
+
+// General layout
+html, body {
+  height: 100% ;
+}
+body {
+  background: url('../images/main-bg.jpg') 50% 50% fixed;
+  background-size: cover;
+}
+.navbar {
+  color:#fff;
+}
+.container {
+  max-width: 750px;
+}
+
+// Tables styling
+#customersTable {
+  &.table {
+    tr {
+      th {
+        border-top:0;
+        font-size: 1.2em;
+        background: $brand-color;
+        padding:0;
+        border-left: 1px solid #fff;
+        a, a:hover {
+          padding: 1em;
+          display: block;
+          color: #fff;
+          text-decoration: none;
+          cursor: pointer;
+          i {
+            float: right;
+            font-size: 1.5em;
+          }
+        }
+        &:first-child {
+          border-left: none;
+        }
+      }
+      td {
+        vertical-align: middle;
+        border-top:0;
+        border-bottom: 1px solid #f1f1f1;
+        padding:0.5em 1em;
+        &:nth-child(even) {
+          border-left: 1px solid #f1f1f1;
+        }
+      }
+    }
+  }
+}
+
+// Box module
+.box {
+  background: #fff;
+  padding: 2em 3em;
+  margin: 0 0 2em 0;
+}
+
+// Pagination module
+.pagination {
+  border:1px solid #f1f1f1;
+  line-height: 37px;
+  ul {
+    -webkit-padding-start: 0;
+    margin-bottom: 0;
+    li {
+      display: inline-block;
+      a {
+        padding: 1em 1.5em;
+        cursor: pointer;
+      }
+      &.active {
+        a {
+          background: $brand-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// Snippets
+.align-center {
+  text-align: center;
+}

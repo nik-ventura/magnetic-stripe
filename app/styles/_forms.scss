@@ -1,0 +1,16 @@
+
+// Styling of form elements
+.form-group {
+  position: relative;
+  .form-control {
+    border-radius: 0;
+    height: 47px;
+  }
+  i {
+    position: absolute;
+    right: 0.6em;
+    top: 0.6em;
+    font-size: 2em;
+    color: #ccc;
+  }
+}

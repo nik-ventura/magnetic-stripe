@@ -1,0 +1,135 @@
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.container[ui-view] {
+  height: 100%; }
+
+.ui-view-container {
+  position: relative; }
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+
+[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+  -moz-transform: scale3d(0.5, 0.5, 0.5);
+  transform: scale3d(0.5, 0.5, 0.5); }
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
+
+[ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform: translate3d(100px, 0, 0);
+  -moz-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0); }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?96be23");
+  src: url("fonts/icomoon.eot?#iefix96be23") format("embedded-opentype"), url("fonts/icomoon.woff?96be23") format("woff"), url("fonts/icomoon.ttf?96be23") format("truetype"), url("fonts/icomoon.svg?96be23#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-lab:before {
+  content: "\e600"; }
+
+.icon-search:before {
+  content: "\e602"; }
+
+.icon-expand-less:before {
+  content: "\e603"; }
+
+.icon-expand-more:before {
+  content: "\e604"; }
+
+.icon-unfold-more:before {
+  content: "\e601"; }
+
+.form-group {
+  position: relative; }
+  .form-group .form-control {
+    border-radius: 0;
+    height: 47px; }
+  .form-group i {
+    position: absolute;
+    right: 0.6em;
+    top: 0.6em;
+    font-size: 2em;
+    color: #ccc; }
+
+html, body {
+  height: 100%; }
+
+.container {
+  width: 750px; }
+
+#customersTable.table tr th {
+  font-size: 1.2em;
+  background: #45B370;
+  padding: 0;
+  border-left: 1px solid #6FCB93;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); }
+  #customersTable.table tr th a, #customersTable.table tr th a:hover {
+    padding: 1em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer; }
+    #customersTable.table tr th a i, #customersTable.table tr th a:hover i {
+      float: right;
+      font-size: 1.5em; }
+  #customersTable.table tr th:first-child {
+    border-left: none; }
+#customersTable.table tr td {
+  padding: 0.5em 1em; }
+  #customersTable.table tr td:nth-child(even) {
+    border-left: 1px solid #f1f1f1; }
+
+.box {
+  padding: 2em 3em;
+  border: 1px solid #e8e8e8; }
+
+.pagination ul li {
+  display: inline-block; }
+  .pagination ul li a {
+    padding: 1em;
+    cursor: pointer; }
+  .pagination ul li.active a {
+    background: #6FCB93;
+    color: #fff; }
+
+.align-center {
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

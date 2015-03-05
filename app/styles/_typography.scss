@@ -1,0 +1,14 @@
+
+// Variables
+$baseFontSize:12px;
+$baseFontFamily: 'Raleway', sans-serif;;
+
+// Base typography
+body {
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+}
+
+.tip {
+  color: rgb(23, 132, 162);
+}
